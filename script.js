@@ -63,7 +63,7 @@ function aiMove() {
     } else if (difficulty === "medium") {
         move = findBestMove(board, 2); 
     } else {
-        move = findBestMove(board); // Minimax complet
+        move = findBestMove(board);
     }
 
     if (move !== -1) {
@@ -106,7 +106,7 @@ function minimax(board, depth, isMaximizing, depthLimit) {
     if (winner === "O") return 10 - depth;
     if (winner === "X") return depth - 10;
     if (winner === "tie") return 0;
-    if (depth >= depthLimit) return 0; // Limiter la profondeur
+    if (depth >= depthLimit) return 0;
 
     if (isMaximizing) {
         let bestScore = -Infinity;
