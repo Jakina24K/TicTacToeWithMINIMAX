@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jeu de Morpion</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <h1>Jeu de Morpion</h1>
+
+        <!-- Sélection du premier joueur -->
+        <label for="starter">Qui commence ?</label>
+        <select id="starter" onchange="startGame()">
+            <option value="player">Moi</option>
+            <option value="ai">IA</option>
+        </select>
+
+        <!-- Sélection du niveau de difficulté -->
+        <label for="difficulty">Difficulté :</label>
+        <select id="difficulty">
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+        </select>
+
+        <div class="board" id="board"></div>
+        <div class="message" id="message"></div>
+        <button onclick="restartGame()">Recommencer</button>
+    </body>
+
+    <script src="script.js"></script>
+</html>
